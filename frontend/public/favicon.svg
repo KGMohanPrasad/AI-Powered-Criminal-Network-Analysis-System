@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0E1626" />
+      <stop offset="100%" stop-color="#070B12" />
+    </linearGradient>
+    <linearGradient id="cyanStroke" x1="12" y1="8" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Shield Silhouette -->
+  <path d="M32 4L54 13V30C54 44 44.5 54.5 32 60C19.5 54.5 10 44 10 30V13L32 4Z" fill="url(#shieldGrad)" stroke="url(#cyanStroke)" stroke-width="2.5" />
+
+  <!-- Tactical Radar Rings -->
+  <circle cx="32" cy="30" r="16" stroke="#1E2D4A" stroke-width="1.5" stroke-dasharray="2 2" />
+  <circle cx="32" cy="30" r="10" stroke="rgba(34, 211, 238, 0.4)" stroke-width="1" />
+  
+  <!-- Crosshairs -->
+  <line x1="32" y1="18" x2="32" y2="42" stroke="rgba(34, 211, 238, 0.45)" stroke-width="1.2" />
+  <line x1="20" y1="30" x2="44" y2="30" stroke="rgba(34, 211, 238, 0.45)" stroke-width="1.2" />
+
+  <!-- Network Nodes -->
+  <line x1="32" y1="30" x2="23" y2="24" stroke="#06B6D4" stroke-width="1.5" />
+  <line x1="32" y1="30" x2="41" y2="25" stroke="#06B6D4" stroke-width="1.5" />
+  <line x1="32" y1="30" x2="32" y2="39" stroke="#3B82F6" stroke-width="1.5" />
+
+  <circle cx="32" cy="30" r="3.5" fill="#22D3EE" filter="url(#glow)" />
+  <circle cx="23" cy="24" r="2.5" fill="#67E8F9" />
+  <circle cx="41" cy="25" r="2.5" fill="#67E8F9" />
+  <circle cx="32" cy="39" r="2.5" fill="#3B82F6" />
+</svg>

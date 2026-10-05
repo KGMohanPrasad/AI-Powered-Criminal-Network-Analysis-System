@@ -1,0 +1,68 @@
+[
+  {
+    "id": "NCRB-AGG-2025-01",
+    "crime_head": "Cybercrime - Online Financial Fraud & Phishing",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "year": "2025",
+    "incidents_reported": 1420,
+    "description": "Annual aggregated cyber fraud incidents reported across Chennai metro cyber crime stations. Major vector: UPI payment deception.",
+    "latitude": 13.0827,
+    "longitude": 80.2707
+  },
+  {
+    "id": "NCRB-AGG-2025-02",
+    "crime_head": "Vehicle Theft - Motor Automobiles",
+    "state": "Delhi",
+    "district": "New Delhi",
+    "year": "2025",
+    "incidents_reported": 3890,
+    "description": "Aggregated motor vehicle theft statistics compiled across NCT Delhi districts with 48% recovery rate.",
+    "latitude": 28.6139,
+    "longitude": 77.2090
+  },
+  {
+    "id": "NCRB-AGG-2025-03",
+    "crime_head": "Economic Offences - Corporate & Banking Fraud",
+    "state": "Maharashtra",
+    "district": "Mumbai",
+    "year": "2025",
+    "incidents_reported": 2150,
+    "description": "Commercial and financial offenses aggregated from Mumbai Economic Offences Wing (EOW).",
+    "latitude": 18.9220,
+    "longitude": 72.8347
+  },
+  {
+    "id": "NCRB-AGG-2025-04",
+    "crime_head": "Cybercrime - Identity Theft & Social Engineering",
+    "state": "Karnataka",
+    "district": "Bengaluru Urban",
+    "year": "2025",
+    "incidents_reported": 2740,
+    "description": "Aggregated reports registered through National Cybercrime Reporting Portal (NCRP) in Bengaluru.",
+    "latitude": 12.9716,
+    "longitude": 77.5946
+  },
+  {
+    "id": "NCRB-AGG-2025-05",
+    "crime_head": "Property Crime - Commercial Burglary",
+    "state": "Telangana",
+    "district": "Hyderabad",
+    "year": "2025",
+    "incidents_reported": 890,
+    "description": "Reported commercial breaking and property trespass instances in Cyberabad and Hyderabad commissionerates.",
+    "latitude": 17.3850,
+    "longitude": 78.4867
+  },
+  {
+    "id": "NCRB-AGG-2025-06",
+    "crime_head": "Public Safety - Hazardous Materials Advisory",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "year": "2025",
+    "incidents_reported": 45,
+    "description": "Aggregated industrial safety compliance notices issued in chemical processing zones.",
+    "latitude": 23.0225,
+    "longitude": 72.5714
+  }
+]
