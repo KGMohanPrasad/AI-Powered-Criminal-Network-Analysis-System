@@ -1,0 +1,13 @@
+# IDE & Assistant tooling
+.agents/
+.claude/
+skills-lock.json
+.idea/
+.vscode/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Database lock files
+*.lock.db

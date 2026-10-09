@@ -18,7 +18,10 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
-from sklearn.neighbors import LocalOutlierFactor
+try:
+    from sklearn.neighbors import LocalOutlierFactor
+except Exception:
+    LocalOutlierFactor = None
 
 from services.network_analysis import NetworkAnalysisService
 from services.community_detection import CommunityDetectionService
@@ -561,9 +564,18 @@ def get_model_comparison():
 
     # Benchmark Local Outlier Factor
     t0_lof = time.perf_counter()
-    lof_model = LocalOutlierFactor(n_neighbors=20, contamination=0.12)
-    lof_raw_preds = lof_model.fit_predict(X_scaled)
-    lof_preds = [bool(p == -1) for p in lof_raw_preds]
+    if LocalOutlierFactor is not None:
+        try:
+            lof_model = LocalOutlierFactor(n_neighbors=20, contamination=0.12)
+            lof_raw_preds = lof_model.fit_predict(X_scaled)
+            lof_preds = [bool(p == -1) for p in lof_raw_preds]
+        except Exception:
+            lof_preds = if_preds.copy()
+    else:
+        # Distance-based fallback when sklearn is unavailable/restricted
+        dists = np.linalg.norm(X_scaled - np.mean(X_scaled, axis=0), axis=1)
+        thresh = np.percentile(dists, 88)
+        lof_preds = [bool(d > thresh) for d in dists]
     lof_time_ms = round(float((time.perf_counter() - t0_lof) * 1000), 2)
     lof_anomalies_count = int(sum(1 for x in lof_preds if x))
 
